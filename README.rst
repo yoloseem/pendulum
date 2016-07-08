@@ -9,28 +9,28 @@ Python datetimes made easy.
 
 .. code-block:: python
 
-    import pendulum
+   >>> import pendulum
 
-    now_in_paris = pendulum.now('Europe/Paris')
-    '2016-07-04T00:49:58.502116+02:00'
-    now_in_paris.in_timezone('UTC')
-    '2016-07-03T22:49:58.502116+00:00'
+   >>> now_in_paris = pendulum.now('Europe/Paris')
+   '2016-07-04T00:49:58.502116+02:00'
+   >>> now_in_paris.in_timezone('UTC')
+   '2016-07-03T22:49:58.502116+00:00'
 
-    tomorrow = pendulum.now().add_day()
-    last_week = pendulum.now().sub_week()
+   >>> tomorrow = pendulum.now().add_day()
+   >>> last_week = pendulum.now().sub_week()
 
-    if pendulum.now().is_weekend():
-        print('Party!')
+   >>> if pendulum.now().is_weekend():
+       print('Party!')
 
-    past = pendulum.now().sub_minutes(2)
-    past.diff_for_humans()
-    '2 minutes ago'
+   >>> past = pendulum.now().sub_minutes(2)
+   >>> past.diff_for_humans()
+   '2 minutes ago'
 
-    delta = past - last_week
-    delta.hours
-    23
-    delta.in_words(locale='en')
-    '6 days 23 hours 58 minutes'
+   >>> delta = past - last_week
+   >>> delta.hours
+   23
+   >>> delta.in_words(locale='en')
+   '6 days 23 hours 58 minutes'
 
 Resources
 =========
